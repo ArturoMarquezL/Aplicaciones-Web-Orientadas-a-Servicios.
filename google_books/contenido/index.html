@@ -1,0 +1,36 @@
+$def with(datos)
+<html lang="es">
+
+<head>
+    <title>App_1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <form method="POST">
+    <div class="mark">
+          <div class="form-group">
+          <div class="container">
+          <div class="colums is-4">
+            <label class="label">Nombre del libro</label>
+            <input type="text" name="book_name">
+            <br>
+            <br>
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+      <div align="center">
+      $if datos !=None:
+      $:datos["nombre_libro"]<br>
+      $:datos["imagen"]<br>
+      $:datos["autor"]<br>
+      $:datos["url"]<br>
+      </div>
+      
+    
+</body>
+</html>

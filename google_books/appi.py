@@ -1,7 +1,7 @@
 import requests
 import json
 
-resultado = requests.get("https://www.googleapis.com/books/v1/volumes?q=quilting")
+resultado = requests.get(" https://www.googleapis.com/books/v1/volumes?q=sinsajo")
 print(resultado.status_code)
 print(resultado.headers["Content-Type"])
 

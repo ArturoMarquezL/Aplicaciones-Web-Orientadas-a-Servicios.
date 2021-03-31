@@ -1,0 +1,1 @@
+{'nombre': 'arturo', 'dia': 1, 'mes': 'Enero', 'year': 1996, 'edad': 25}

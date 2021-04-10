@@ -2,12 +2,12 @@ import web
 import json
 import random
 
-
 carta = {}
 urls = (
     '/(.*)',
     'Cartas',
 )
+
 app = web.application(urls, globals())
 
 class Cartas():
@@ -162,7 +162,6 @@ class Cartas():
       horoscopo["Solucion"] = "Escribe la fecha de tu nacimiento en forma DD/MM/AAAA"
       result= json.dumps(horoscopo)
       return result
-
 
 if __name__ == "__main__":
 	app.run()

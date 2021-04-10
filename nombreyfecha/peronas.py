@@ -1,11 +1,12 @@
 import web
 import json
+
 urls = (
-    '/fecha?', 'Fecha'
+    '/persona?', 'Persona'
 )
 app = web.application(urls, globals())
 
-class Fecha():
+class Persona():
     def __init__(self): 
         pass
     def GET(self):  
@@ -28,7 +29,8 @@ class Fecha():
             return json.dumps(result)
         except:
             data ={}
-            data["error"] = "error 404 la url no existe"
+            data["error"] = "error 404 url no existente corrija"
             return data
+
 if __name__ =="__main__": 
     app.run()

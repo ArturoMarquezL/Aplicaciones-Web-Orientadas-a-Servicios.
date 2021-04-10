@@ -12,6 +12,7 @@ class Index():
     form = web.input() 
     titulo=form["titulo"]
     resultado = requests.get(" https://api.jikan.moe/v3/search/anime?q="+titulo) 
+    
     anime = resultado.json()
     results=anime["results"]
     encoded = json.dumps(results)
@@ -20,7 +21,7 @@ class Index():
     anime=[]
     
     for animes in decoded:
-
+        
         url=animes["url"]
         imagenes=animes["image_url"]
         synopsis=animes["synopsis"]
